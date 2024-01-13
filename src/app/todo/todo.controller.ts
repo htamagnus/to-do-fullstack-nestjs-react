@@ -14,6 +14,7 @@ import { TodoService } from './todo.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { IndexTodoSwagger } from './swagger/index-todo.swagger';
 
 @Controller('todo')
 @ApiTags('todos')
@@ -22,7 +23,12 @@ export class TodoController {
 
   @Get()
   @ApiOperation({ summary: 'Get all todos' })
-  @ApiResponse({ status: 200, description: 'Return all todos.' })
+  @ApiResponse({
+    status: 200,
+    description: 'Return all todos.',
+    type: IndexTodoSwagger,
+    isArray: true,
+  })
   async index() {
     return await this.todoService.findAll();
   }
