@@ -1,8 +1,9 @@
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
-}
+import { Theme } from "./themes";
 
-export default App;
+export const App = () => {
+  return (
+    <Theme>
+
+    </Theme>
+  )
+};
