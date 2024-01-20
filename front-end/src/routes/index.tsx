@@ -1,5 +1,5 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import App from "../App";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { App } from "../App";
 
 export const Routes = () => {
     return (
@@ -7,6 +7,9 @@ export const Routes = () => {
             <Switch>
                 <Route path="/"/>
                 <App />
+                <Route path="*">
+                    <Redirect to="/"/>
+                </Route>
             </Switch>
         </BrowserRouter>   
     )
