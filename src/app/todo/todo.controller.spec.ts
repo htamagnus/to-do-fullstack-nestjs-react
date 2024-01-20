@@ -13,7 +13,7 @@ const todoEntityList: TodoEntity[] = [
 
 const newTodoEntity = new TodoEntity({ task: 'new-task', isDone: 0 });
 
-const updatedTodoEntity = new TodoEntity({ task: 'task-1', isDone: 1 })
+const updatedTodoEntity = new TodoEntity({ task: 'task-1', isDone: 1 });
 
 describe('TodoController', () => {
   let todoController: TodoController;
