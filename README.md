@@ -3,6 +3,9 @@
 
 <h1 align="center" style="font-weight: bold;">Project name 💻</h1>
 
-
+<div align="center">
+  
 ![nest][nestjs__BADGE]
 ![swagger][swagger_BADGE]
+
+</div>
