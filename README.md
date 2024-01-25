@@ -41,10 +41,7 @@ Certifique-se de ter instalados antes de executar o projeto:
 
 ---
 
-<h2 id="back-end"> Back-end em NestJS 🚀 </h2>
-Foi utilizado o framework NestJS para o back end, MySQL como banco de dados e Swagger para a documentação da API. Além disso, foram implementados testes unitários para os serviços (services) e controladores (controllers).
-
-## Instalação Back-end ⚙️
+<h2 id="back-end">Instalação Back-end ⚙️ </h2>
 1. Clone este repositório para o seu ambiente local.
 2. Navegue até a pasta back-end e execute o seguinte comando para instalar as dependências (Node 20):
 ```bash
@@ -106,17 +103,15 @@ npm run test
 
 ---
 
-<h2 id="front-end"> Front-end em React 🚀 </h2>
-- foto front
-
----
-
-## Instalação front-end 🚀
+<h2 id="front-end"> Instalação front-end 🚀 </h2>
 1. Navegue até a pasta front-end e execute o seguinte comando para instalar as dependências (Node 20):
+
 ```bash
 npm install
 ```
+
 2. Inicie o servidor:
+   
 ```bash
 npm start
 ```
