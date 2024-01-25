@@ -7,6 +7,7 @@
 
 <h1 align="center" style="font-weight: bold;">Projeto To Do Full Stack com NestJS e React 🚀</h1>
 
+
 <div align="center">
   
 ![nest][nestjs__BADGE]
@@ -18,15 +19,81 @@
 
 </div>
 
+## Pré-requisitos 🛠️
+Certifique-se de ter instalados antes de executar o projeto:
+
+- Node.js
+- npm (Node Package Manager)
+- MySQL Server
+
+---
+
+## Back-end em NestJS 🚀
+Foi utilizado o framework NestJS para o back end, MySQL como banco de dados e Swagger para a documentação da API. Além disso, foram implementados testes unitários para os serviços (services) e controladores (controllers).
+
+## Instalação Back-end ⚙️
+1. Clone este repositório para o seu ambiente local.
+2. Navegue até a pasta back-end e execute o seguinte comando para instalar as dependências (Node 20):
+```bash
+npm install
+```
+3. Inicie o servidor NestJS com o seguinte comando:
+```bash
+npm start
+```
+
+---
+
+### Configuração MySQL 🗃️
+- Crie um banco de dados MySQL para o projeto;
+- Atualize as configurações do banco de dados no arquivo .env na raiz da pasta back-end;
+```bash
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+
 <h1 align="center">
-  
+
+![image](https://github.com/htamagnus/to-do-fullstack-nestjs-react/assets/85269068/210918a0-c447-4971-bf48-d36fc71542b4)
+
+</h1>
+
+---
+
+
+### Swagger 📖
+A documentação da API está disponível através do Swagger. Após iniciar o servidor, acesse http://localhost:3000/swagger para explorar e interagir com a API.
+
+<h1 align="center">
+
 ![image](https://github.com/htamagnus/to-do-fullstack-nestjs-react/assets/85269068/9ea4dedc-383a-48b2-b6e3-c27b25424b59)
+
+</h1>
+
+---
+
+### Testes unitários ✅ 
+
+Foram implementados testes unitários para garantir a integridade dos serviços e controladores. Execute os testes com o seguinte comando:
+
+```bash
+npm run test
+```
+
+<h1 align="center">
 
 ![image](https://github.com/htamagnus/to-do-fullstack-nestjs-react/assets/85269068/ab96e2ce-caab-42f1-b8be-5bab2efc2eea)
 
 ![image](https://github.com/htamagnus/to-do-fullstack-nestjs-react/assets/85269068/a5e65dae-0c68-4d3f-8974-51bf17d14258)
 
-![image](https://github.com/htamagnus/to-do-fullstack-nestjs-react/assets/85269068/210918a0-c447-4971-bf48-d36fc71542b4)
-
-
 </h1>
+
+---
+
+## Contribuição 🤝
+Sinta-se à vontade para contribuir para este projeto. Se você encontrar problemas ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
+
+---
