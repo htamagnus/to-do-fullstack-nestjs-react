@@ -27,7 +27,8 @@
  <a href="#contribuicao">Contribuições 🤝</a>
 </p>
 
-## Descrição 🚀
+<h2 id="descricao"> Descrição 🚀 </h2>
+Este é um projeto full stack que utiliza o framework NestJS para o back-end, MySQL como banco de dados e Swagger para a documentação da API. Além disso, foram implementados testes unitários para os serviços (services) e controladores (controllers) da API. O front-end foi desenvolvido em React.
 
 ---
 
