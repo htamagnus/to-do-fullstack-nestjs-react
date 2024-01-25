@@ -12,3 +12,5 @@
 ![mysql][mysql_BADGE]
 
 </div>
+
+front-end: node 18.18.0
