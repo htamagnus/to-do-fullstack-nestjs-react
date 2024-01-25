@@ -1,7 +1,8 @@
 import { ThemeProvider } from "styled-components";
 
-const fontSizes: any = [14, 20, 96]
+const fontSizes: any = [14, 18, 20, 96]
 fontSizes.body = fontSizes[0]
+fontSizes.bodyLarge = fontSizes[1]
 fontSizes.bodyExtraLarge = fontSizes[1]
 fontSizes.displayExtraLarge = fontSizes[2]
 
