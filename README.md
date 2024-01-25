@@ -19,7 +19,19 @@
 
 </div>
 
-## Pré-requisitos 🛠️
+<p align="center">
+ <a href="#descricao">Descrição 🚀</a> • 
+ <a href="#pre-requisitos">Pré-requisitos 🛠️ </a> •
+ <a href="#back-end">Instalação Back-end 🚀 </a> •
+ <a href="#front-end">Instalação Front-end 🚀 </a> •
+ <a href="#contribuicao">Contribuições 🤝</a>
+</p>
+
+## Descrição 🚀
+
+---
+
+<h2 id="pre-requisitos"> Pré-requisitos 🛠️ </h2>
 Certifique-se de ter instalados antes de executar o projeto:
 
 - Node.js
@@ -28,7 +40,7 @@ Certifique-se de ter instalados antes de executar o projeto:
 
 ---
 
-## Back-end em NestJS 🚀
+<h2 id="back-end"> Back-end em NestJS 🚀 </h2>
 Foi utilizado o framework NestJS para o back end, MySQL como banco de dados e Swagger para a documentação da API. Além disso, foram implementados testes unitários para os serviços (services) e controladores (controllers).
 
 ## Instalação Back-end ⚙️
@@ -93,7 +105,25 @@ npm run test
 
 ---
 
-## Contribuição 🤝
+<h2 id="front-end"> Front-end em React 🚀 </h2>
+- foto front
+
+---
+
+## Instalação front-end 🚀
+1. Navegue até a pasta front-end e execute o seguinte comando para instalar as dependências (Node 20):
+```bash
+npm install
+```
+2. Inicie o servidor:
+```bash
+npm start
+```
+O aplicativo React estará disponível em http://localhost:3000.
+
+---
+
+<h2 id="contribuicao"> Contribuições 🤝 </h2>
 Sinta-se à vontade para contribuir para este projeto. Se você encontrar problemas ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
 
 ---
