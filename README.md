@@ -35,18 +35,20 @@ Este é um projeto full stack que utiliza o framework NestJS para o back-end, My
 <h2 id="pre-requisitos"> Pré-requisitos 🛠️ </h2>
 Certifique-se de ter instalados antes de executar o projeto:
 
-- Node.js
-- npm (Node Package Manager)
+- Node.js - (v.20.10.0)
+- npm - (v.10.2.3)
 - MySQL Server
 
 ---
 
 <h2 id="back-end">Instalação Back-end ⚙️ </h2>
 1. Clone este repositório para o seu ambiente local.
+
 2. Navegue até a pasta back-end e execute o seguinte comando para instalar as dependências (Node 20):
 ```bash
 npm install
 ```
+
 3. Inicie o servidor NestJS com o seguinte comando:
 ```bash
 npm start
