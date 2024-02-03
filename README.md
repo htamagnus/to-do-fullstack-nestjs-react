@@ -35,8 +35,8 @@ Este é um projeto full stack que utiliza o framework NestJS para o back-end, My
 <h2 id="pre-requisitos"> Pré-requisitos 🛠️ </h2>
 Certifique-se de ter instalados antes de executar o projeto:
 
-- Node.js
-- npm (Node Package Manager)
+- Node.js - (v.20.10.0)
+- npm - (v.10.2.3)
 - MySQL Server
 
 ---
