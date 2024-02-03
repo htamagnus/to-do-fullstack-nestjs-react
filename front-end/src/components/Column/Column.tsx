@@ -7,7 +7,7 @@ export const Column = styled.div<ColumnProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     ${flexbox}
     ${layout}
     ${space}

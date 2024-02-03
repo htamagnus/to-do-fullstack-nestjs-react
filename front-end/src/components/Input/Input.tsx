@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { flex, FlexProps } from 'styled-system'
+import { flex, FlexProps, typography, TypographyProps } from 'styled-system'
 
-type InputProps = FlexProps;
+type InputProps = FlexProps & TypographyProps;
 
 export const Input = styled.input<InputProps>`
     background-color: transparent;
@@ -15,4 +15,5 @@ export const Input = styled.input<InputProps>`
     }
 
     ${flex}
+    ${typography}
 `

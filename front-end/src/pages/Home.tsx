@@ -174,30 +174,27 @@ export const Home = () => {
         <Logo />
       </Column>
       <Column
-        width="100%"
-        minHeight="300px"
-        bg="rgba(255, 255, 255, 0.2)"
-        borderRadius="4px"
+        width="60%"
+        minHeight="260px"
+        borderRadius="12px"
         p="20px"
       >
-        <Text fontSize="bodyLarge">{handleStageStatus}</Text>
+        <Text fontSize="bodyExtraLarge">{handleStageStatus}</Text>
         <Text fontSize="displayExtraLarge" py="20px">
           {secondsToTime(seconds)}
         </Text>
 
-        <Row py="20px">{handleStageButtons}</Row>
+        <Row>{handleStageButtons}</Row>
       </Column>
-      <Text fontWeight="bold" fontSize="bodyLarge" my="10px" pl="10px">
-        Tasks
-      </Text>
-      <Row width="50%">
+      <Row width="50%" paddingTop="8px">
         <Input
+          fontSize="body"
           flex={1}
           placeholder="Enter a task name here.."
           value={taskName}
           onChange={(e) => setTaskName(e.target.value)}
         />
-        <Button onClick={handleOKButton}>Ok</Button>
+        <Button fontSize="body" onClick={handleOKButton}>Ok</Button>
       </Row>
       <List items={tasks} />
     </Column>

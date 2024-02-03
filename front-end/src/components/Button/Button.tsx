@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {SpaceProps, space, variant} from 'styled-system'
+import {SpaceProps, space, variant, typography, TypographyProps} from 'styled-system'
 
-type ButtonProps = SpaceProps & {
+type ButtonProps = SpaceProps & TypographyProps &{
     variant?: string
 }
 
@@ -25,6 +25,7 @@ export const Button = styled.button<ButtonProps>`
         }
     })}
     ${space}
+    ${typography}
 `
 
 Button.defaultProps = {
