@@ -43,10 +43,12 @@ Certifique-se de ter instalados antes de executar o projeto:
 
 <h2 id="back-end">Instalação Back-end ⚙️ </h2>
 1. Clone este repositório para o seu ambiente local.
+
 2. Navegue até a pasta back-end e execute o seguinte comando para instalar as dependências (Node 20):
 ```bash
 npm install
 ```
+
 3. Inicie o servidor NestJS com o seguinte comando:
 ```bash
 npm start
