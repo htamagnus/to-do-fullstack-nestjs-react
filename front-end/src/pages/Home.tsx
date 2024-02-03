@@ -1,4 +1,4 @@
-import { Input, Text, Button, Row, Column, List, Logo } from "components";
+import { Input, Text, Button, Row, Column, List, Logo, Icon } from "components";
 import { useState } from "react";
 
 export const Home = () => {
@@ -36,12 +36,33 @@ export const Home = () => {
         p="20px"
       >
         <Text fontSize="bodyLarge">Ready</Text>
-        <Text fontSize="displayExtraLarge" py="20px">25:00</Text>
+        <Text fontSize="displayExtraLarge" py="20px">
+          25:00
+        </Text>
         <Button variant="primary">
           <Text fontSize="bodyLarge" color="primary">
             Start
           </Text>
         </Button>
+
+        <Row py="20px">
+          <Button variant="primary" p="10px 20px" mx="5px">
+            <Icon variant="play" />
+          </Button>
+          <Button variant="primary" p="10px 20px" mx="5px">
+            <Icon variant="pause" />
+          </Button>
+          <Button variant="primary" p="10px 20px" mx="5px">
+            <Icon variant="stop" />
+          </Button>
+          <Button variant="primary" p="10px 20px" mx="5px">
+            <Icon variant="restart" />
+          </Button>
+          <Button variant="primary" p="10px 20px" mx="5px">
+            <Icon variant="done" />
+          </Button>
+        </Row>
+
       </Column>
       <Text fontWeight="bold" fontSize="bodyLarge" my="10px" pl="10px">
         Tasks
