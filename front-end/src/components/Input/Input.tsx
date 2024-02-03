@@ -6,12 +6,12 @@ type InputProps = FlexProps;
 export const Input = styled.input<InputProps>`
     background-color: transparent;
     padding: 10px;
-    border-bottom: 2px solid #fff;
-    color: #fff;
+    border-bottom: 2px solid #818181;
+    color: #3f3f3f;
     outline: none;
 
     &::placeholder {
-        color: #fff;
+        color: #3f3f3f;
     }
 
     ${flex}

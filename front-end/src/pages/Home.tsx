@@ -1,4 +1,4 @@
-import { Input, Text, Button, Row, Column, List } from 'components'
+import { Input, Text, Button, Row, Column, List, Logo } from 'components'
 import { useState } from 'react'
 
 export const Home = () => {
@@ -16,9 +16,12 @@ export const Home = () => {
     }
 
     return (
-        <Column width="600px" margin="0 auto">
+        <Column width="600px" margin="140px auto" background="rgba(255, 255, 255, 0.178)" boxShadow="0 2px 82px 0 rgba(0, 0, 0, 0.5)" borderRadius="12px" paddingBottom="40px">
+            <Column  width="100%" py="10px" alignItems="center">
+                <Logo />
+            </Column>
             <Text fontWeight="bold" fontSize="bodyLarge" my="10px" pl="10px">Tasks</Text>
-            <Row width="100%">
+            <Row width="50%">
             <Input flex={1} placeholder="Enter a task name here.." value={taskName}onChange={(e) => setTaskName(e.target.value)} />
             <Button onClick={handleOKButton}>Ok</Button>
             </Row>

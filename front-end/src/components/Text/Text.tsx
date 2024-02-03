@@ -5,7 +5,7 @@ type TextProps = TypographyProps & SpaceProps
 
 export const Text = styled.p<TextProps>`
     font-family: 14px;
-    color: #fff;
+    color: #3f3f3f;
     ${typography}
     ${space}
 `

@@ -4,6 +4,6 @@ export const Button = styled.button`
     padding: 10px 20px;
     background-color: transparent;
     cursor: pointer;
-    color: #fff;
-    border-bottom: 2px solid #fff;
+    color: #3f3f3f;
+    border-bottom: 2px solid #3f3f3f;
 `
