@@ -16,7 +16,7 @@ export const Home = () => {
     }
 
     return (
-        <Column width="600px" margin="140px auto" background="rgba(255, 255, 255, 0.178)" boxShadow="0 2px 82px 0 rgba(0, 0, 0, 0.5)" borderRadius="12px" paddingBottom="40px">
+        <Column width="600px" margin="140px auto" background="rgba(255, 255, 255, 0.178)" boxShadow="0 2px 82px 0 rgba(0, 0, 0, 0.5)" borderRadius="12px" paddingBottom="40px" paddingTop="40px">
             <Column  width="100%" py="10px" alignItems="center">
                 <Logo />
             </Column>
