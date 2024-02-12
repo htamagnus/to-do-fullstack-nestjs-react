@@ -38,9 +38,7 @@ describe('TodoService', () => {
     }).compile();
 
     todoService = module.get<TodoService>(TodoService);
-    todoRepository = module.get<Repository<TodoEntity>>(
-      getRepositoryToken(TodoEntity),
-    );
+    todoRepository = module.get<Repository<TodoEntity>>(getRepositoryToken(TodoEntity));
   });
 
   it('should be defined', () => {
@@ -79,14 +77,10 @@ describe('TodoService', () => {
 
     it('should throw a not found exception', () => {
       // Arrange
-      jest
-        .spyOn(todoRepository, 'findOneOrFail')
-        .mockRejectedValueOnce(new Error());
+      jest.spyOn(todoRepository, 'findOneOrFail').mockRejectedValueOnce(new Error());
 
       // Assert
-      expect(todoService.findOneOrFail('1')).rejects.toThrowError(
-        NotFoundException,
-      );
+      expect(todoService.findOneOrFail('1')).rejects.toThrowError(NotFoundException);
     });
   });
 
@@ -129,9 +123,7 @@ describe('TodoService', () => {
         isDone: 1,
       };
 
-      jest
-        .spyOn(todoRepository, 'save')
-        .mockResolvedValueOnce(updatedTodoEntityItem);
+      jest.spyOn(todoRepository, 'save').mockResolvedValueOnce(updatedTodoEntityItem);
 
       // Act
       const result = await todoService.update('1', data);
@@ -142,9 +134,7 @@ describe('TodoService', () => {
 
     it('should throw a not found exception', () => {
       // Arrange
-      jest
-        .spyOn(todoRepository, 'findOneOrFail')
-        .mockRejectedValueOnce(new Error());
+      jest.spyOn(todoRepository, 'findOneOrFail').mockRejectedValueOnce(new Error());
 
       const data: UpdateTodoDto = {
         task: 'task-1',
@@ -152,9 +142,7 @@ describe('TodoService', () => {
       };
 
       // Assert
-      expect(todoService.update('1', data)).rejects.toThrowError(
-        NotFoundException,
-      );
+      expect(todoService.update('1', data)).rejects.toThrowError(NotFoundException);
     });
 
     it('should throw an exception', () => {
@@ -184,21 +172,15 @@ describe('TodoService', () => {
 
     it('should throw a not found exception', () => {
       // Arrange
-      jest
-        .spyOn(todoRepository, 'findOneOrFail')
-        .mockRejectedValueOnce(new Error());
+      jest.spyOn(todoRepository, 'findOneOrFail').mockRejectedValueOnce(new Error());
 
       // Assert
-      expect(todoService.deleteById('1')).rejects.toThrowError(
-        NotFoundException,
-      );
+      expect(todoService.deleteById('1')).rejects.toThrowError(NotFoundException);
     });
 
     it('should throw an exception', () => {
       // Arrange
-      jest
-        .spyOn(todoRepository, 'softDelete')
-        .mockRejectedValueOnce(new Error());
+      jest.spyOn(todoRepository, 'softDelete').mockRejectedValueOnce(new Error());
 
       // Assert
       expect(todoService.deleteById('1')).rejects.toThrowError();

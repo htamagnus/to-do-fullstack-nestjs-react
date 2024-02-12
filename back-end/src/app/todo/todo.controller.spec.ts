@@ -108,9 +108,7 @@ describe('TodoController', () => {
 
     it('should throw an exeception', () => {
       // Arrange
-      jest
-        .spyOn(todoService, 'findOneOrFail')
-        .mockRejectedValueOnce(new Error());
+      jest.spyOn(todoService, 'findOneOrFail').mockRejectedValueOnce(new Error());
 
       // Assert
       expect(todoController.show('1')).rejects.toThrowError();
