@@ -5,15 +5,18 @@ import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 const SECONDS_DEFAULT = 1500;
 
 export const Home = () => {
-  const { tasks, getAll } = useTodo();
+  const { tasks, getAllTodos, createTodo } = useTodo();
   const [taskName, setTaskName] = useState("");
   const [seconds, setSeconds] = useState(SECONDS_DEFAULT);
   const [timer, setTimer] = useState<any>();
   const [stage, setStage] = useState("ready");
   const [taskIndex, setTaskIndex] = useState(0);
 
-  const handleOKButton = () => {
-  };
+  const handleOKButton = useCallback(async () => {
+    await createTodo({ task: taskName, isDone: 0 });
+    await getAllTodos();
+    setTaskName('');
+  }, [createTodo, getAllTodos, taskName]);
 
   const secondsToTime = (secs: number) => {
     const divisorMinutes = secs % 3600;
@@ -81,8 +84,8 @@ export const Home = () => {
   }, [stage]);
 
   useEffect(() => {
-    getAll();
-  }, [getAll]);
+    getAllTodos();
+  }, [getAllTodos]);
 
   const handleStageButtons = useMemo(() => {
     switch (stage) {
