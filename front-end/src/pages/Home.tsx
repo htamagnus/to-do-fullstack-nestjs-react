@@ -5,21 +5,14 @@ import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 const SECONDS_DEFAULT = 1500;
 
 export const Home = () => {
-  const { getAll } = useTodo();
+  const { tasks, getAll } = useTodo();
   const [taskName, setTaskName] = useState("");
-  const [tasks, setTasks] = useState<{ label: string }[]>([]);
   const [seconds, setSeconds] = useState(SECONDS_DEFAULT);
   const [timer, setTimer] = useState<any>();
   const [stage, setStage] = useState("ready");
+  const [taskIndex, setTaskIndex] = useState(0);
 
   const handleOKButton = () => {
-    if (!taskName) return;
-    setTasks((previous) => {
-      const copy = [...previous];
-      copy.push({ label: taskName });
-      return copy;
-    });
-    setTaskName("");
   };
 
   const secondsToTime = (secs: number) => {
@@ -202,7 +195,7 @@ export const Home = () => {
         />
         <Button fontSize="body" onClick={handleOKButton}>Ok</Button>
       </Row>
-      <List items={tasks} />
+      <List items={tasks} selectedIndex={taskIndex} onClick={setTaskIndex} />
     </Column>
   );
 };
