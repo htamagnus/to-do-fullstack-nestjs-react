@@ -2,7 +2,7 @@ import { Input, Text, Button, Row, Column, List, Logo, Icon } from "components";
 import { useTodo } from "hooks";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 
-const SECONDS_DEFAULT = 1500;
+const SECONDS_DEFAULT = 10;
 
 export const Home = () => {
   const { tasks, getAllTodos, createTodo, updateTodo } = useTodo();
