@@ -1,9 +1,11 @@
 import { Input, Text, Button, Row, Column, List, Logo, Icon } from "components";
-import { Fragment, useCallback, useMemo, useState } from "react";
+import { useTodo } from "hooks";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 
 const SECONDS_DEFAULT = 1500;
 
 export const Home = () => {
+  const { getAll } = useTodo();
   const [taskName, setTaskName] = useState("");
   const [tasks, setTasks] = useState<{ label: string }[]>([]);
   const [seconds, setSeconds] = useState(SECONDS_DEFAULT);
@@ -84,6 +86,10 @@ export const Home = () => {
         return "Ready";
     }
   }, [stage]);
+
+  useEffect(() => {
+    getAll();
+  }, [getAll]);
 
   const handleStageButtons = useMemo(() => {
     switch (stage) {
