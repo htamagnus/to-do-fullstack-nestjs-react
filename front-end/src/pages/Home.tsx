@@ -5,7 +5,7 @@ import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 const SECONDS_DEFAULT = 1500;
 
 export const Home = () => {
-  const { tasks, getAllTodos, createTodo } = useTodo();
+  const { tasks, getAllTodos, createTodo, updateTodo } = useTodo();
   const [taskName, setTaskName] = useState("");
   const [seconds, setSeconds] = useState(SECONDS_DEFAULT);
   const [timer, setTimer] = useState<any>();
@@ -66,6 +66,15 @@ export const Home = () => {
     setSeconds(SECONDS_DEFAULT);
     setStage("ready");
   }, [handlePauseButton]);
+
+  const handleDoneButton = useCallback(async () => {
+    const task = tasks[taskIndex];
+    if (task) {
+      await updateTodo(task.id, { task: task.task, isDone: 1 });
+      await getAllTodos();
+      setStage('ready');
+    }
+  }, [updateTodo, getAllTodos, taskIndex, tasks]);
 
   const handleStageStatus = useMemo(() => {
     switch (stage) {
@@ -143,7 +152,7 @@ export const Home = () => {
             >
               <Icon variant="restart" />
             </Button>
-            <Button variant="primary" p="10px 20px" mx="5px">
+            <Button variant="primary" p="10px 20px" mx="5px" onClick={handleDoneButton}>
               <Icon variant="done" />
             </Button>
           </Row>
@@ -160,7 +169,7 @@ export const Home = () => {
           </Fragment>
         );
     }
-  }, [handlePauseButton, handleStopButton, handleRestartButton, stage]);
+  }, [stage, handlePauseButton, handleStopButton, handleRestartButton, handleDoneButton]);
 
   return (
     <Column
